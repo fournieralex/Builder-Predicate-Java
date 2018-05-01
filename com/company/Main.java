@@ -26,6 +26,12 @@ public class Main {
         surferlist.add(s4);
         surferlist.add(s5);
 
+        surferlist.sort(new Comparator<Surfer>() {
+            public int Compare(Surfer s1, Surfer s2)
+                return s1.getAge().compareTo(s2.getAge());
+        }
+        });
+
 
         List<Surfer> surferAgeStanceList = filterSurfers(surferlist, new SurferAgeStancePredicate());
         for (Surfer s : surferAgeStanceList) {
