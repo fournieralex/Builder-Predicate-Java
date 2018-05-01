@@ -31,6 +31,7 @@ public class Main {
         for (Surfer s : surferAgeStanceList) {
             System.out.println(s);
         }
+        StringSurfers(surferlist, new SurferString());
 
 
     }
@@ -40,7 +41,12 @@ public class Main {
 
 
 
-
+    public static void StringSurfers(List<Surfer> surfers, SurferStringPredicate sp){
+        for(Surfer surfer: surfers){
+           String output = sp.accept(surfer);
+           System.out.println(output);
+        }
+    }
 
 
 
